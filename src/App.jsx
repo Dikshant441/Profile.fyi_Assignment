@@ -1,5 +1,15 @@
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Body from "./Components/Body";
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="mt-24">
+      <Header />
+      <Body />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
