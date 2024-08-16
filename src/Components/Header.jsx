@@ -17,13 +17,13 @@ const Header = () => {
       <div className="py-2 md:py-0 flex justify-center items-center">
         <ul className="flex flex-row md:flex-row gap-x-8 mr-12">
           <li className="text-gray-800 text-xl font-semibold hover:text-orange-500">
-            <Link href="/">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li className="text-gray-800 text-xl font-semibold hover:text-orange-500">
-            <Link href="/about">About Us</Link>
+            <Link to="/about">About Us</Link>
           </li>
           <li className=" text-gray-800 text-3xl hover:text-orange-500">
-            <Link href="/cart" className="flex ">
+            <Link to="/cart" className="flex ">
               <BsCartCheckFill />
               <span className="text-base font-bold">{cart.length}</span>
             </Link>

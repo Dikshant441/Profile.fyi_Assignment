@@ -11,7 +11,7 @@ const Footer = () => {
             We are a company dedicated to providing the best services in the
             industry.
           </p>
-          <Link href="/about" className="text-blue-400 hover:underline">
+          <Link to="/about" className="text-blue-400 hover:underline">
             Learn More
           </Link>
         </div>

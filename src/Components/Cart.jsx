@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeItem } from "../stote/cartSlice";
+import Header from "./Header";
 
 const Cart = () => {
   const cart = useSelector((store) => store.cart.items);
@@ -13,9 +14,11 @@ const Cart = () => {
   };
 
   return (
-    <div className="mb-2 p-2 border-2 border-black">
-      {cart.map((item) => (
-        <div className="bg-white border border-gray-300 rounded-lg shadow-md overflow-hidden flex flex-col">
+    
+    <div className="mt-24 p-2">
+      <Header/>
+      {cart.map((item, index) => (
+        <div className="bg-white border border-gray-300 rounded-lg shadow-md overflow-hidden flex flex-col mb-4">
           <div className="p-4 flex flex-col flex-grow">
             <img
               src={item.thumbnail}
