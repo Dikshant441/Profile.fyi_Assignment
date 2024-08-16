@@ -1,7 +1,11 @@
 import { BsCartCheckFill } from "react-icons/bs";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+
+  const cart =  useSelector(store => store.cart.items);
+  
   return (
     <div className=" flex flex-row md:flex-row justify-between bg-gray-200 shadow-lg fixed top-0 w-full z-[1] h-20">
       <div className="flex items-center p-2">
@@ -21,7 +25,7 @@ const Header = () => {
           <li className=" text-gray-800 text-3xl hover:text-orange-500">
             <Link href="/cart" className="flex ">
               <BsCartCheckFill />
-              <span className="text-base font-bold">1</span>
+              <span className="text-base font-bold">{cart.length}</span>
             </Link>
           </li>
         </ul>

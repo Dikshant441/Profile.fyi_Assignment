@@ -22,7 +22,7 @@ const Body = () => {
     <div>
       <div className="m-4 grid gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
         {Products?.map((Product) => (
-          <ProductCard key={Product.id} cartData={Product} />
+          <ProductCard key={Product.id} cartData={Product} Product={Product}/>
         ))}
       </div>
     </div>
