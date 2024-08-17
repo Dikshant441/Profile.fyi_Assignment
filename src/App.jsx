@@ -6,6 +6,7 @@ import About from "./Components/About";
 
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import Error from "./Components/Error";
+import Checkout from "./Components/CheckOut";
 
 const App = () => {
   return (
@@ -38,6 +39,10 @@ export const appRoute = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/checkout",
+        element: <Checkout/>
       },
     ],
     errorElement: <Error />,
