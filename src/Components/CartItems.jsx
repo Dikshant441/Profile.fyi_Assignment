@@ -13,9 +13,7 @@ const CartItem = ({ item, handleRemoveItem, handleQuantityChange }) => {
           className="w-20 h-20 object-cover"
         />
         <div className="ml-4 flex-grow">
-          <h1 className="text-base font-semibold line-clamp-2">
-            {item.title}
-          </h1>
+          <h1 className="text-base font-semibold line-clamp-2">{item.title}</h1>
           <h3 className="text-base font-semibold line-clamp-2">
             {item.category}
           </h3>

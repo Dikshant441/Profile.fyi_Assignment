@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import Popup from "../utils/popUp";
 
 const Checkout = () => {
+  const [showPopup, setShowPopup] = useState(false);
   const cart = useSelector((store) => store.cart.items);
 
   // Calculate total price and number of items
@@ -23,8 +25,18 @@ const Checkout = () => {
   const totalAmount = totalPrice - discount + platformFee + deliveryCharge;
   const amountSaved = discount;
 
+  const handlePayment = () => {
+    setShowPopup(true); // Show the popup when the payment button is clicked
+  };
+
   return (
     <div className="mt-24 p-4 flex flex-col items-center">
+      {showPopup && (
+        <Popup
+          message="Thank you for your payment!"
+          onClose={() => setShowPopup(false)} // Close the popup
+        />
+      )}
       <h1 className="text-2xl font-bold text-orange-500 mb-4">Checkout</h1>
       <div className="w-full sm:w-3/4 md:w-2/3 lg:w-2/4 bg-white border border-gray-300 rounded-lg shadow-md p-4">
         <h2 className="text-xl font-semibold mb-4">Price Details</h2>
@@ -73,7 +85,10 @@ const Checkout = () => {
       </div>
 
       {/* Button to proceed to payment */}
-      <button className="p-2 m-4 bg-orange-500 text-white font-semibold rounded-lg">
+      <button
+        className="p-2 m-4 bg-orange-500 text-white font-semibold rounded-lg"
+        onClick={handlePayment}
+      >
         Continue to Pay
       </button>
     </div>

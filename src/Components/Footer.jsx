@@ -18,7 +18,7 @@ const Footer = () => {
 
         <div className="flex flex-col">
           <h2 className="text-xl font-semibold ">Contact Us</h2>
-          
+
 
           <p className="">
             Email:{" "}
@@ -28,6 +28,7 @@ const Footer = () => {
             >
               singhdikshant200@gmail.com
             </Link>
+            {" "}
             <span>Phone: (+91) 7339895383</span>
           </p>
         </div>

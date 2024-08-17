@@ -14,11 +14,11 @@ const ProductCard = ({ cartData, Product }) => {
 
     if (itemExists) {
       setMessage("Item already in cart!");
-      setTimeout(() => setMessage(""), 1000); // Clear message after 2 seconds
+      setTimeout(() => setMessage(""), 1500); // Clear message after 2 seconds
     } else {
       dispatch(addItem(Product));
       setMessage("Item added to cart!");
-      setTimeout(() => setMessage(""), 1000); // Clear message after 2 seconds
+      setTimeout(() => setMessage(""), 1500); // Clear message after 2 seconds
     }
   };
 
@@ -47,7 +47,9 @@ const ProductCard = ({ cartData, Product }) => {
 
         {message && (
           <motion.div
-            className={`absolute top-2 right-2 px-3 py-1 rounded-lg shadow-md ${message.includes("already") ? 'bg-red-500' : 'bg-green-500'} text-white`}
+            className={`absolute top-2 right-2 px-3 py-1 rounded-lg shadow-md ${
+              message.includes("already") ? "bg-red-500" : "bg-green-500"
+            } text-white`}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}

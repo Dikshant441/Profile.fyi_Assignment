@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, removeItem, updateQuantity } from "../stote/cartSlice"; // Make sure to add updateQuantity action
-import EmptyCart from "../utils/EmptyCart";
+import EmptyCart from "./EmptyCart";
 import { Link } from "react-router-dom";
 import CartItem from "./CartItems";
 
