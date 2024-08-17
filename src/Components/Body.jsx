@@ -8,7 +8,7 @@ const Body = () => {
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-      console.log(result);
+      // console.log(result);
       setProducts(result.data.data);
     } catch (error) {
       console.error(error);
@@ -19,8 +19,8 @@ const Body = () => {
     getProducts();
   }, []);
   return (
-    <div>
-      <div className="m-4 grid gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+    <div className="mt-24">
+      <div className=" m-4 grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
         {Products?.map((Product) => (
           <ProductCard key={Product.id} cartData={Product} Product={Product}/>
         ))}

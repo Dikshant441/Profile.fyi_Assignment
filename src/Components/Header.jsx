@@ -24,8 +24,12 @@ const Header = () => {
           </li>
           <li className=" text-gray-800 text-3xl hover:text-orange-500">
             <Link to="/cart" className="flex ">
-              <BsCartCheckFill />
-              <span className="text-base font-bold">{cart.length}</span>
+              <BsCartCheckFill />{
+                cart.length> 0 && (
+                  <span className="text-base font-bold">{cart.length}</span>
+                )
+              }
+             
             </Link>
           </li>
         </ul>

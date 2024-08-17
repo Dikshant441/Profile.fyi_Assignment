@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-600 text-white py-6">
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <footer className="bg-gray-600 text-white h-42 flex flex-col justify-between">
+      <div className="container mx-auto mt-3 mb-2 px-4 grid grid-cols-1 md:grid-cols-2 flex-grow">
         <div className="flex flex-col">
-          <h2 className="text-xl font-semibold mb-2">About Us</h2>
-          <p className="mb-4">
+          <h2 className="text-xl font-semibold">About Us</h2>
+          <p className="">
             We are a company dedicated to providing the best services in the
             industry.
           </p>
@@ -17,20 +17,22 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col">
-          <h2 className="text-xl font-semibold mb-2">Contact Us</h2>
-          <p className="mb-4">
+          <h2 className="text-xl font-semibold ">Contact Us</h2>
+          
+
+          <p className="">
             Email:{" "}
-            <a
+            <Link
               href="mailto:support@example.com"
               className="text-blue-400 hover:underline"
             >
               singhdikshant200@gmail.com
-            </a>
+            </Link>
+            <span>Phone: (+91) 7339895383</span>
           </p>
-          <p>Phone: (+91) 7339895383</p>
         </div>
       </div>
-      <div className="bg-gray-700 text-center py-4 mt-6">
+      <div className="bg-gray-700 text-center py-2">
         <p>
           &copy; {new Date().getFullYear()} Dikshant Singh. All rights reserved.
         </p>
