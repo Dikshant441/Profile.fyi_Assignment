@@ -10,10 +10,10 @@ const Popup = ({ message, onClose }) => {
 
   const handleRedirect = () => {
     dispatch(clearCart());
-    onClose(); // Close the popup
+    onClose(); // close the popup
     setTimeout(() => {
-      navigate("/"); // Redirect to home page after closing the popup
-    }, 0); // Delay for a smooth user experience
+      navigate("/"); // redirect to home page after closing the popup
+    }, 500); // delay for a smooth user experience
   };
 
   return (

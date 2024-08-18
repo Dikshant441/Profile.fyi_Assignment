@@ -9,14 +9,15 @@ const Cart = () => {
   const cart = useSelector((store) => store.cart.items);
   const dispatch = useDispatch();
 
+  // this function perform action that remove item from cart
   const handleRemoveItem = (id) => {
     dispatch(removeItem(id));
   };
-
+  // this function perform action that remove all item from cart
   const handleClearCart = () => {
     dispatch(clearCart());
   };
-
+  // to handle quantity of each item in cart and update 
   const handleQuantityChange = (id, quantity) => {
     if (quantity > 0) {
       dispatch(updateQuantity({ id, quantity }));
@@ -37,7 +38,7 @@ const Cart = () => {
       ) : (
         cart.map((item) => (
           <CartItem
-            key={item.id}
+            key={item.id} //  Passing prop to CartItem
             item={item}
             handleRemoveItem={handleRemoveItem}
             handleQuantityChange={handleQuantityChange}

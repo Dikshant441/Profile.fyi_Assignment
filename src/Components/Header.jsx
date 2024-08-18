@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  // using useSelector can read the data in cartSlice 
   const cart = useSelector((store) => store.cart.items);
 
   return (
@@ -19,13 +20,13 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li className="text-gray-800 text-xl font-semibold hover:text-orange-500">
-            <Link to="/about">About Us</Link>
+            <Link to="/about">About</Link>
           </li>
           <li className=" text-gray-800 text-3xl hover:text-orange-500">
             <Link to="/cart" className="flex ">
               <BsCartCheckFill />
               {cart.length > 0 && (
-                <span className="text-base font-bold">{cart.length}</span>
+                <span className="flex items-center justify-center w-5 h-5 text-sm font-medium text-black bg-yellow-500 rounded-full">{cart.length}</span>
               )}
             </Link>
           </li>
